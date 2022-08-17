@@ -11,9 +11,24 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 function sumArray(arr) {
-  // Your code here
+
+  if (!arr.length) {
+    return 0
+  }
+  let firstEl = arr[0] // 
+
+  return firstEl + sumArray(arr.slice(1)) // return arr.pop() + sumArray(arr)
+
+  // // return arr.map(el => {
+  //   el + sumArray
+
+  // })(arr - 1)
+
 }
-  
+sumArray([1, 2, 3]); //  6
+sumArray([0, 1, -3]); //  -2
+sumArray([1, 2, 3, 4, 5]); // 15
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
