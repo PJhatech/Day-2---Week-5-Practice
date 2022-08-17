@@ -14,10 +14,19 @@ iceCreamShop([], 'honey lavender'); // false
 
 
 function iceCreamShop(flavors, favorite) {
-  // Your code here
+  if(!flavors.includes(favorite)){
+    return false;
+  }
+  return true;
 }
 
 
+
+console.log(iceCreamShop(['vanilla', 'strawberry'], 'blue moon')); // false
+iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true
+iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio'); // false
+iceCreamShop(['moose tracks'], 'moose tracks'); // true
+iceCreamShop([], 'honey lavender'); // false
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = iceCreamShop;
